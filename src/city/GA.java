@@ -15,7 +15,7 @@ public class GA {
     private static final int tournamentSize = 5;
     private static final boolean elitism = true;
 
-    // Mengembangkan populasi dari suatu generasi
+    // Evolves a population over one generation
     public static Population evolvePopulation(Population pop) {
         Population newPopulation = new Population(pop.populationSize(), false);
 
