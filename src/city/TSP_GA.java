@@ -12,7 +12,7 @@ package city;
 public class TSP_GA {
     public static void main(String[] args) {
 
-        // Create and add our cities
+        // Membuat dan menambahkan city
         City city = new City(60, 200);
         TourManager.addCity(city);
         City city2 = new City(180, 200);
@@ -54,17 +54,17 @@ public class TSP_GA {
         City city20 = new City(160, 20);
         TourManager.addCity(city20);
 
-        // Initialize population
+        // Inisialisasi Populasi
         Population pop = new Population(50, true);
         System.out.println("Initial distance: " + pop.getFittest().getDistance());
 
-        // Evolve population for 100 generations
+        // Mengembangkan generasi sebanyak 'i'
         pop = GA.evolvePopulation(pop);
-        for (int i = 0; i < 100; i++) {
-            pop = GA.evolvePopulation(pop);
+        for (int i = 0; i < 2; i++) {
+            pop = GA.evolvePopulation(pop);    
         }
 
-        // Print final results
+        // Menampilkan Hasil akhir
         System.out.println("Finished");
         System.out.println("Final distance: " + pop.getFittest().getDistance());
         System.out.println("Solution:");
