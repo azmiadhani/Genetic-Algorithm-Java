@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package city;
-
+import java.util.Scanner;
 /**
  *
  * @author Oktama P.A.S
@@ -61,20 +61,27 @@ public class TSP_GA {
 //        City city20 = new City(160, 20);
 //        TourManager.addCity(city20);
 
-//        // Initialize population
-//        Population pop = new Population(50, true);
-//        System.out.println("Initial distance: " + pop.getFittest().getDistance());
-//
-//        // Evolve population for 100 generations
-//        pop = GA.evolvePopulation(pop);
-//        for (int i = 0; i < 100; i++) {
-//            pop = GA.evolvePopulation(pop);
-//        }
-//
-//        // Print final results
-//        System.out.println("Finished");
-//        System.out.println("Final distance: " + pop.getFittest().getDistance());
-//        System.out.println("Solution:");
-//        System.out.println(pop.getFittest());
+        // Initialize population
+        Population pop = new Population(50, true);
+        System.out.println("Initial distance: " + pop.getFittest().getDistance());
+
+        // Evolve population for 100 generations
+        pop = GA.evolvePopulation(pop);
+        for (int i = 0; i < 100; i++) {
+            pop = GA.evolvePopulation(pop);
+        }
+
+        // Print final results
+        System.out.println("Finished");
+        System.out.println("Final distance: " + pop.getFittest().getDistance());
+        System.out.println("Solution:");
+        System.out.println(pop.getFittest());
+        Scanner input = new Scanner(System.in);
+         System.out.print("Ketik 'quit' dan Enter: ");
+            String s=input.next();
+            if(s.equals("quit")){
+                System.out.println("Thanks");
+                System.exit(0);
+            }
     }
 }
