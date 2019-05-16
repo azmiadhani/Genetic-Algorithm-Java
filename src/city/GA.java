@@ -5,6 +5,8 @@
  */
 package city;
 
+import static city.Function.newline;
+
 /**
  *
  * @author Oktama P.A.S
@@ -18,7 +20,7 @@ public class GA {
     // Evolves a population over one generation
     public static Population evolvePopulation(Population pop) {
         Population newPopulation = new Population(pop.populationSize(), false);
-
+        String newLine = System.getProperty("line.separator");
         // Keep our best individual if elitism is enabled
         int elitismOffset = 0;
         if (elitism) {
@@ -35,6 +37,11 @@ public class GA {
             Tour parent2 = tournamentSelection(pop);
             // Crossover parents
             Tour child = crossover(parent1, parent2);
+            
+               System.out.println("-> Parent 1 : " + parent1 + newLine + "-> Parent 2 : " + parent2 + newLine + "-> Child : " + child);
+
+            
+            
             // Add child to new population
             newPopulation.saveTour(i, child);
         }
@@ -43,7 +50,8 @@ public class GA {
         for (int i = elitismOffset; i < newPopulation.populationSize(); i++) {
             mutate(newPopulation.getTour(i));
         }
-
+        
+        
         return newPopulation;
     }
 
@@ -83,7 +91,9 @@ public class GA {
                 }
             }
         }
+        
         return child;
+        
     }
 
     // Mutate a tour using swap mutation
@@ -118,6 +128,7 @@ public class GA {
         }
         // Get the fittest tour
         Tour fittest = tournament.getFittest();
+        System.out.println("fittes: " + fittest);
         return fittest;
     }
 }

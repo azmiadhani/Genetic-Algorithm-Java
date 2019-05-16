@@ -5,6 +5,8 @@
  */
 package city;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Az
@@ -14,4 +16,17 @@ public class Function {
         int x = (int) (Math.random()*((max-min)+1)+min);
         return x;
     }
+    public static boolean getEnter(String what_next){
+        Scanner keyIn = new Scanner(System.in);
+        System.out.println("--------------------------------------------------------------");
+        System.out.print("Tekan enter untuk melanjutkan ke proses " + what_next);System.out.println("");
+        System.out.println("--------------------------------------------------------------");
+        keyIn.nextLine();
+        return true;
+    }
+    public static boolean newline(){
+        System.out.println("");
+        return true;
+    }
+    
 }

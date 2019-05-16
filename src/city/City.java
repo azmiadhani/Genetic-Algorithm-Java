@@ -23,8 +23,7 @@ public class City {
         this.x = x;
         this.y = y;
         System.out.println("City " + city_i);
-        System.out.println("Titik x : " + this.x);
-        System.out.println("Titik y : " + this.y);
+        System.out.println("Titik (x,y): ("+this.x+","+this.y+")");
     }
     
     // Gets city's x coordinate

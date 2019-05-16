@@ -30,11 +30,13 @@ public class Population {
     // Saves a tour
     public void saveTour(int index, Tour tour) {
         tours[index] = tour;
+        System.out.println("Tour " + index + ":" + tours[index]);
     }
     
     // Gets a tour from population
     public Tour getTour(int index) {
         return tours[index];
+        
     }
 
     // Gets the best tour in the population
