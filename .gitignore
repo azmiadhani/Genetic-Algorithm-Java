@@ -4,9 +4,12 @@
 # Ada Library Information
 *.ali
 <<<<<<< HEAD
+<<<<<<< HEAD
 nbproject/private/private.properties
 nbproject/build-impl.xml
 nbproject/genfiles.properties
 nbproject/project.properties
+=======
+>>>>>>> parent of 2d80dba... cek
 =======
 >>>>>>> parent of 2d80dba... cek
