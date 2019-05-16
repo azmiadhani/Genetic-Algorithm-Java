@@ -21,6 +21,7 @@ public class City {
     public City(int x, int y){
         this.x = x;
         this.y = y;
+//        System.out.println("Titik X: " + this.x);
     }
     
     // Gets city's x coordinate
