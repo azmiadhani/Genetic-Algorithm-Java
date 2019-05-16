@@ -8,8 +8,9 @@ package city;
 
 public class City {
 
-     int x;
+    int x;
     int y;
+    int city_i;
     
     // Constructs a randomly placed city
     public City(){
@@ -18,9 +19,12 @@ public class City {
     }
     
     // Constructs a city at chosen x, y location
-    public City(int x, int y){
+    public City(int x, int y, int city_i){
         this.x = x;
         this.y = y;
+        System.out.println("City " + city_i);
+        System.out.println("Titik x : " + this.x);
+        System.out.println("Titik y : " + this.y);
     }
     
     // Gets city's x coordinate

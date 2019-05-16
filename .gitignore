@@ -9,7 +9,12 @@ nbproject/private/private.properties
 nbproject/build-impl.xml
 nbproject/genfiles.properties
 nbproject/project.properties
+nbproject/project.xml
+dist/
+build/
+test/
 =======
 >>>>>>> parent of 2d80dba... cek
 =======
 >>>>>>> parent of 2d80dba... cek
+/dist/
